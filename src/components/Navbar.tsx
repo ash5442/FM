@@ -164,12 +164,14 @@ export default function Navbar() {
               zIndex: 49,
               display: "flex",
               flexDirection: "column",
-              padding: "28px 24px 40px",
+              padding: "0 24px 40px",
               overflowY: "auto",
             }}
           >
             {/* Nav links */}
-            <nav style={{ flex: 1 }}>
+            <nav>
+              {/* Top divider */}
+              <div style={{ borderTop: "1px solid rgba(26,26,26,0.08)" }} />
               {links.map((l, i) => (
                 <motion.div
                   key={l.label}
@@ -181,16 +183,15 @@ export default function Navbar() {
                     href={l.href}
                     onClick={close}
                     style={{
-                      display: "flex",
-                      alignItems: "center",
-                      padding: "18px 0",
+                      display: "block",
+                      width: "100%",
+                      padding: "16px 0",
                       color: "#1A1A1A",
                       textDecoration: "none",
-                      fontSize: 22,
-                      fontWeight: 700,
+                      fontSize: 20,
+                      fontWeight: 600,
                       letterSpacing: "-0.01em",
                       borderBottom: "1px solid rgba(26,26,26,0.08)",
-                      minHeight: 44,
                     }}
                   >
                     {l.label}
@@ -199,16 +200,17 @@ export default function Navbar() {
               ))}
             </nav>
 
-            {/* Bottom: language toggle + CTA */}
+            {/* Language toggle + CTA */}
             <motion.div
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.28 }}
-              style={{ display: "flex", flexDirection: "column", gap: 12, marginTop: 32 }}
+              style={{ display: "flex", flexDirection: "column", gap: 16, marginTop: 24 }}
             >
               <button
                 onClick={toggle}
                 style={{
+                  width: "100%",
                   background: "transparent",
                   border: "1px solid rgba(26,26,26,0.18)",
                   borderRadius: 10,
