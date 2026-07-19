@@ -14,7 +14,7 @@ export default function Footer() {
         <Logo size="sm" />
 
         <nav style={{ display: "flex", flexWrap: "wrap", gap: "8px 28px", justifyContent: "center" }}>
-          {f.links.map((l) => (
+          {(f.links as { label: string; href: string }[]).map((l) => (
             <Link key={l.label} href={l.href} style={{ color: "#1A1A1A", textDecoration: "none", fontSize: 13, opacity: 0.65, fontWeight: 500 }}>
               {l.label}
             </Link>

@@ -56,7 +56,7 @@ export default function Services() {
         </motion.p>
 
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 24 }}>
-          {s.cards.map(({ title, desc }, i) => {
+          {(s.cards as { title: string; desc: string }[]).map(({ title, desc }, i) => {
             const Icon = icons[i];
             return (
               <motion.div

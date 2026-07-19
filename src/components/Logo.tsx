@@ -3,9 +3,11 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 
+const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
+
 const lineVariant = {
   hidden: { scaleX: 0 },
-  show: { scaleX: 1, transition: { duration: 0.7, delay: 0.4, ease: [0.22, 1, 0.36, 1] } },
+  show: { scaleX: 1, transition: { duration: 0.7, delay: 0.4, ease: EASE } },
 };
 
 const letterVariant = {
@@ -13,7 +15,7 @@ const letterVariant = {
   show: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.45, delay: i * 0.04, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 0.45, delay: i * 0.04, ease: EASE },
   }),
 };
 

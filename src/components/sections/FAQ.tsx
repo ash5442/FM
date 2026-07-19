@@ -75,7 +75,7 @@ export default function FAQ() {
 
           <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
             style={{ background: "#EDEAE4", border: "1px solid rgba(26,26,26,0.08)", borderRadius: 20, padding: "8px 28px" }}>
-            {f.items.map((item, i) => (
+            {(f.items as { q: string; a: string }[]).map((item, i) => (
               <AccordionItem key={i} q={item.q} a={item.a} />
             ))}
           </motion.div>
