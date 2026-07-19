@@ -98,6 +98,13 @@ export default function Hero() {
       }}
     >
       <style>{bgAnim}</style>
+      <style>{`
+        @media (max-width: 767px) {
+          .hero-logo  { display: none !important; }
+          .hero-line  { font-size: 36px !important; }
+          .hero-static-line { font-size: 32px !important; }
+        }
+      `}</style>
 
       {/* Animated background */}
       <div style={{ position: "absolute", inset: 0, pointerEvents: "none", backgroundImage: "radial-gradient(circle, rgba(26,20,16,0.25) 1px, transparent 1px)", backgroundSize: "32px 32px", animation: "gridFade 8s ease-in-out infinite" }} />
@@ -114,11 +121,12 @@ export default function Hero() {
       {/* Content */}
       <div style={{ maxWidth: 900, margin: "0 auto", position: "relative" }}>
 
-        {/* Logo */}
+        {/* Logo — hidden on mobile (navbar already shows it) */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] as const }}
+          className="hero-logo"
           style={{ display: "flex", justifyContent: "center", marginBottom: 52 }}
         >
           <Logo size="lg" animate={true} href="/" />
@@ -133,6 +141,7 @@ export default function Hero() {
         >
           {/* Line 1 — typing text */}
           <div
+            className="hero-line"
             style={{
               fontSize: "clamp(48px, 7vw, 82px)",
               fontWeight: 800,
@@ -149,6 +158,7 @@ export default function Hero() {
 
           {/* Line 2 — static */}
           <div
+            className="hero-line hero-static-line"
             style={{
               fontSize: "clamp(48px, 7vw, 82px)",
               fontWeight: 800,

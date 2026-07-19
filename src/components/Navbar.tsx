@@ -150,34 +150,32 @@ export default function Navbar() {
         {menuOpen && (
           <motion.div
             key="mobile-menu"
-            initial={{ opacity: 0, y: -12 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -12 }}
-            transition={{ duration: 0.22, ease: "easeOut" }}
+            initial={{ opacity: 1, clipPath: "inset(0 0 100% 0)" }}
+            animate={{ opacity: 1, clipPath: "inset(0 0 0% 0)" }}
+            exit={{ opacity: 1, clipPath: "inset(0 0 100% 0)" }}
+            transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
             style={{
               position: "fixed",
               top: 72,
               left: 0,
               right: 0,
               bottom: 0,
-              background: "#EDEAE4",
+              background: "#F5F0E8",
               zIndex: 49,
               display: "flex",
               flexDirection: "column",
-              padding: "0 24px 40px",
+              padding: "8px 24px 48px",
               overflowY: "auto",
             }}
           >
-            {/* Nav links */}
+            {/* Nav links only */}
             <nav>
-              {/* Top divider */}
-              <div style={{ borderTop: "1px solid rgba(26,26,26,0.08)" }} />
               {links.map((l, i) => (
                 <motion.div
                   key={l.label}
-                  initial={{ opacity: 0, x: -16 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: i * 0.05 + 0.04 }}
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.05 + 0.1 }}
                 >
                   <Link
                     href={l.href}
@@ -185,13 +183,13 @@ export default function Navbar() {
                     style={{
                       display: "block",
                       width: "100%",
-                      padding: "16px 0",
-                      color: "#1A1A1A",
+                      padding: "18px 0",
+                      color: "#1A1410",
                       textDecoration: "none",
-                      fontSize: 20,
-                      fontWeight: 600,
+                      fontSize: 22,
+                      fontWeight: 700,
                       letterSpacing: "-0.01em",
-                      borderBottom: "1px solid rgba(26,26,26,0.08)",
+                      borderBottom: "1px solid rgba(26,20,16,0.1)",
                     }}
                   >
                     {l.label}
@@ -199,57 +197,6 @@ export default function Navbar() {
                 </motion.div>
               ))}
             </nav>
-
-            {/* Language toggle + CTA */}
-            <motion.div
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.28 }}
-              style={{ display: "flex", flexDirection: "column", gap: 16, marginTop: 24 }}
-            >
-              <button
-                onClick={toggle}
-                style={{
-                  width: "100%",
-                  background: "transparent",
-                  border: "1px solid rgba(26,26,26,0.18)",
-                  borderRadius: 10,
-                  padding: "14px",
-                  fontSize: 14,
-                  fontWeight: 700,
-                  letterSpacing: "0.08em",
-                  cursor: "pointer",
-                  color: "#1A1A1A",
-                  fontFamily: "var(--font-inter)",
-                  minHeight: 52,
-                }}
-              >
-                <span style={{ opacity: lang === "en" ? 1 : 0.45 }}>EN</span>
-                {" / "}
-                <span style={{ opacity: lang === "fr" ? 1 : 0.45 }}>FR</span>
-              </button>
-
-              <Link href="/contact" onClick={close} style={{ display: "block" }}>
-                <button
-                  style={{
-                    width: "100%",
-                    background: "#7A4F2D",
-                    color: "#EDEAE4",
-                    border: "none",
-                    borderRadius: 10,
-                    padding: "16px 22px",
-                    fontSize: 15,
-                    fontWeight: 700,
-                    letterSpacing: "0.04em",
-                    cursor: "pointer",
-                    fontFamily: "var(--font-inter)",
-                    minHeight: 52,
-                  }}
-                >
-                  {tr.nav.cta}
-                </button>
-              </Link>
-            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
