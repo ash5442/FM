@@ -21,6 +21,13 @@ export default function Footer() {
           ))}
         </nav>
 
+        <a
+          href="mailto:Contact@farouk-mchiche.com"
+          style={{ color: "#7A4F2D", textDecoration: "none", fontSize: 14, fontWeight: 500 }}
+        >
+          Contact@farouk-mchiche.com
+        </a>
+
         <div style={{ display: "flex", gap: 12 }}>
           {[
             {
