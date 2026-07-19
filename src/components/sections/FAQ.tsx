@@ -25,7 +25,13 @@ function AccordionItem({ q, a }: { q: string; a: string }) {
       <AnimatePresence initial={false}>
         {open && (
           <motion.div key="content" initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.28, ease: "easeInOut" }} style={{ overflow: "hidden" }}>
-            <p style={{ paddingBottom: 20, fontSize: 14, color: "#1A1A1A", opacity: 0.65, lineHeight: 1.75 }}>{a}</p>
+            <div style={{ paddingBottom: 20 }}>
+              {a.split("\n\n").map((para, i, arr) => (
+                <p key={i} style={{ fontSize: 14, color: "#1A1A1A", opacity: 0.65, lineHeight: 1.75, marginBottom: i < arr.length - 1 ? 12 : 0 }}>
+                  {para}
+                </p>
+              ))}
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

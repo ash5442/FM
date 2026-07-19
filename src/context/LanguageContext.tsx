@@ -139,19 +139,19 @@ const t = {
       items: [
         {
           q: "How do I know your Meta ads can actually generate results?",
-          a: "We've done this for dozens of PT studios, Pilates studios, yoga studios, nutritionists, and medical centres. We only take on businesses we know we can generate results for. Before we take your money, we audit your offer, local market, and competition, and only move forward if we're confident we can generate qualified leads for you. If we don't deliver results within 30 days, you'll get your money back guaranteed.",
+          a: "We've done this for dozens of PT studios, Pilates studios, yoga studios, nutritionists, and medical centres. We only take on businesses we know we can generate results for.\n\nBefore we take your money, we audit your offer, local market, and competition, and only move forward if we're confident we can generate qualified leads for you.\n\nIf we don't deliver results within 30 days, you'll get your money back guaranteed.",
         },
         {
           q: "What exactly are you going to do for my business?",
-          a: "We take the pressure and stress away from you - the studio owner - when it comes to making social media marketing a profitable channel for your fitness business. We don't do contracts. Why? No need to. Our relationships are built on results and trust - we back ourselves to deliver.",
+          a: "We take the pressure and stress away from you - the studio owner - when it comes to making social media marketing a profitable channel for your fitness business.\n\nWe don't do contracts. Why? No need to. Our relationships are built on results and trust - we back ourselves to deliver.",
         },
         {
           q: "How much is this going to cost me upfront?",
-          a: "The paid trial is a one-time €500 upfront. No commitment, no retainers, no 12-month contracts. You actively have to tell us that you want to continue a week before the trial ends so that we can offer you a retainer model, which you can still cancel on a monthly basis.",
+          a: "The paid trial is a one-time €500 upfront. No commitment, no retainers, no 12-month contracts.\n\nYou actively have to tell us that you want to continue a week before the trial ends so that we can offer you a retainer model, which you can still cancel on a monthly basis.",
         },
         {
           q: "Do you only work with big businesses?",
-          a: "Not necessarily. We only care about working with people who are hungry for growth and won't stop expanding when they hit capacity. However, if your business is dead or has zero traction we might not be a good fit. We cannot increase sales in something that there is zero demand for.",
+          a: "Not necessarily. We only care about working with people who are hungry for growth and won't stop expanding when they hit capacity.\n\nHowever, if your business is dead or has zero traction we might not be a good fit. We cannot increase sales in something that there is zero demand for.",
         },
         {
           q: "How long does it take to start seeing results?",
@@ -159,7 +159,7 @@ const t = {
         },
         {
           q: "How much of my time is this going to require?",
-          a: "Barely anything. You just do what you do best: turn leads into customers. We handle all the Meta ads, visuals, copy, and campaign management, and provide weekly updates on what's working and how your campaigns are performing.",
+          a: "Barely anything. You just do what you do best: turn leads into customers.\n\nWe handle all the Meta ads, visuals, copy, and campaign management, and provide weekly updates on what's working and how your campaigns are performing.",
         },
         {
           q: "What happens if I want to cancel?",
