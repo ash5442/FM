@@ -59,13 +59,13 @@ export default function FAQ() {
 
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 32, alignItems: "start" }}>
           <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
-            style={{ background: "#7A4F2D", borderRadius: 20, padding: "40px 32px", color: "#EDEAE4" }}>
-            <h3 style={{ fontSize: 24, fontWeight: 800, marginBottom: 16, letterSpacing: "-0.01em" }}>{f.cardTitle}</h3>
-            <p style={{ fontSize: 15, opacity: 0.75, lineHeight: 1.65, marginBottom: 32 }}>{f.cardSub}</p>
+            style={{ background: "#EDE7D9", border: "1.5px solid rgba(122,79,45,0.2)", borderRadius: 20, padding: "40px 32px" }}>
+            <h3 style={{ fontSize: 24, fontWeight: 800, marginBottom: 16, letterSpacing: "-0.01em", color: "#1A1410" }}>{f.cardTitle}</h3>
+            <p style={{ fontSize: 15, color: "#1A1410", opacity: 0.65, lineHeight: 1.65, marginBottom: 32 }}>{f.cardSub}</p>
             <Link href="/contact">
               <button
-                style={{ background: "#EDEAE4", color: "#7A4F2D", border: "none", borderRadius: 8, padding: "12px 24px", fontSize: 14, fontWeight: 700, cursor: "pointer", transition: "all 0.2s", fontFamily: "var(--font-inter)" }}
-                onMouseEnter={(e) => { (e.currentTarget as HTMLButtonElement).style.opacity = "0.9"; }}
+                style={{ background: "#7A4F2D", color: "#EDEAE4", border: "none", borderRadius: 8, padding: "12px 24px", fontSize: 14, fontWeight: 700, cursor: "pointer", transition: "all 0.2s", fontFamily: "var(--font-inter)" }}
+                onMouseEnter={(e) => { (e.currentTarget as HTMLButtonElement).style.opacity = "0.88"; }}
                 onMouseLeave={(e) => { (e.currentTarget as HTMLButtonElement).style.opacity = "1"; }}
               >
                 {f.cardBtn}

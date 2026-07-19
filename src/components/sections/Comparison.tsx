@@ -62,13 +62,13 @@ export default function Comparison() {
 
           {/* RIGHT — Us (floats to top on mobile via .comparison-us CSS class) */}
           <motion.div className="comparison-us" initial={{ opacity: 0, x: 24 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
-            <div style={{ background: "#1A1A1A", borderRadius: "14px 14px 0 0", padding: "18px 24px", border: "1px solid rgba(255,255,255,0.08)", borderBottom: "none", display: "flex", alignItems: "center", gap: 12 }}>
-              <div style={{ width: 32, height: 32, borderRadius: 8, background: "rgba(122,79,45,0.2)", border: "1px solid rgba(122,79,45,0.35)", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "var(--font-instrument-serif)", fontStyle: "italic", fontSize: 16, color: "#C87941" }}>
-                FM
+            <div style={{ background: "#1A1A1A", borderRadius: "14px 14px 0 0", padding: "18px 24px", border: "1px solid rgba(122,79,45,0.35)", borderBottom: "none", display: "flex", alignItems: "center", gap: 12 }}>
+              <div style={{ width: 32, height: 32, borderRadius: 8, background: "rgba(122,79,45,0.2)", border: "1px solid rgba(122,79,45,0.4)", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "var(--font-instrument-serif)", fontStyle: "italic", fontSize: 18, fontWeight: 800, color: "#C87941" }}>
+                V
               </div>
-              <span style={{ fontSize: 15, fontWeight: 700, color: "#fff", letterSpacing: "0.04em", textTransform: "uppercase" }}>{c.oursLabel}</span>
+              <span style={{ fontSize: 15, fontWeight: 700, color: "#fff", letterSpacing: "0.06em", textTransform: "uppercase" }}>Visionn-eer</span>
             </div>
-            <div style={{ background: "#1A1A1A", border: "1px solid rgba(255,255,255,0.08)", borderTop: "none", borderRadius: "0 0 14px 14px", padding: "4px 24px 16px" }}>
+            <div style={{ background: "#1A1A1A", border: "1px solid rgba(122,79,45,0.35)", borderTop: "none", borderRadius: "0 0 14px 14px", padding: "4px 24px 16px" }}>
               <ul style={{ listStyle: "none" }}>{c.ours.map((item: string, i: number) => <Row key={i} text={item} check={true} />)}</ul>
             </div>
           </motion.div>

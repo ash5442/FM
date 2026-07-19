@@ -91,8 +91,8 @@ const t = {
     },
     reviews: {
       badge: "Reviews",
-      heading: "Trusted by our",
-      headingItalic: "Clients",
+      heading: "Trusted by",
+      headingItalic: "Visionaries",
       sub: "Hear from real users who achieved success with our campaigns",
       items: [
         {
@@ -306,8 +306,8 @@ const t = {
     },
     reviews: {
       badge: "Avis",
-      heading: "La confiance de nos",
-      headingItalic: "Clients",
+      heading: "La confiance des",
+      headingItalic: "Visionnaires",
       sub: "Découvrez comment de vrais utilisateurs ont réussi grâce à nos campagnes",
       items: [
         {

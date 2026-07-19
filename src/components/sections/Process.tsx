@@ -158,7 +158,7 @@ export default function Process() {
   const step = steps[active];
 
   return (
-    <section id="process" style={{ padding: "100px 24px", background: "#E5E1DA" }}>
+    <section id="process" style={{ padding: "100px 24px", background: "#F5F0E8" }}>
       <div style={{ maxWidth: 1100, margin: "0 auto" }}>
         <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} style={{ textAlign: "center", marginBottom: 20 }}>
           <span style={{ display: "inline-block", fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", color: "#7A4F2D", textTransform: "uppercase", background: "rgba(122,79,45,0.1)", border: "1px solid rgba(122,79,45,0.2)", borderRadius: 100, padding: "5px 14px" }}>

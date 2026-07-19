@@ -55,7 +55,7 @@ export default function Services() {
           {s.sub}
         </motion.p>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 24 }}>
+        <div className="services-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24 }}>
           {(s.cards as { title: string; desc: string }[]).map(({ title, desc }, i) => {
             const Icon = icons[i];
             return (
@@ -79,6 +79,9 @@ export default function Services() {
           })}
         </div>
       </div>
+      <style>{`
+        @media (max-width: 900px) { .services-grid { grid-template-columns: 1fr !important; } }
+      `}</style>
     </section>
   );
 }
